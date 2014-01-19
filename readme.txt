@@ -2,8 +2,8 @@
 Contributors: falconerweb 
 Tags: pdf, pdf.js, viewer, reader, mozilla, shortcode
 Requires at least: 3.0.1
-Tested up to: 3.6.1
-Stable tag: 1.1
+Tested up to: 3.8
+Stable tag: 1.2
 
 Insert a PDF viewer into pages with a simple shortcode.
 
@@ -13,12 +13,15 @@ Incorporate Mozilla's PDF.js viewer into your pages and posts with a simple shor
 
 Shortcode Syntax:
 
-[pdfjs-viewer url=http://www.website.com/test.pdf viewer_width=600px viewer_height=700px fullscreen=true]
+[pdfjs-viewer url=http://www.website.com/test.pdf viewer_width=600px viewer_height=700px fullscreen=true download=true print=true openfile=false]
 
 *   url (required): direct url to pdf file
 *   viewer_width (optional): width of the viewer (default: 100%)
 *   viewer_height (optional): height of the viewer (default: 1360px)
 *   fullscreen (optional): true/false, displays fullscreen link above viewer (default: true)
+*   download (optional): true/false, enables or disables download button (default: true)
+*   print (optional): true/false, enables or disables print button (default: true)
+*   openfile (optional): true/false, enables or disables open file button (default: false)
 
 == Installation ==
 

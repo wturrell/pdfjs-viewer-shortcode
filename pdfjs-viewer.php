@@ -1,9 +1,9 @@
-																														<?php
+						<?php
 /*
 Plugin Name: PDFjs Viewer
 Plugin URI: http://tphsfalconer.com
 Description: View PDFs with pdf.js
-Version: 1.0
+Version: 1.1
 Author: Ben & Josh
 Author URI: http://tphsfalconer.com
 License: GPLv2
@@ -19,7 +19,8 @@ function pdfjs_handler($incomingfrompost) {
     'viewer_width' => '100%',
     'fullscreen' => 'true',
     'download' => 'true',
-    'print' => 'true'
+    'print' => 'true',
+    'openfile' => 'false'
   ), $incomingfrompost);
   //run function that actually does the work of the plugin
   $pdfjs_output = pdfjs_function($incomingfrompost);
@@ -28,7 +29,8 @@ function pdfjs_handler($incomingfrompost) {
 }
 
 function pdfjs_function($incomingfromhandler) {
-  $viewer_base_url= "/wp-content/plugins/pdfjs-viewer-shortcode/web/viewer.php";
+  $siteURL = home_url();
+  $viewer_base_url= $siteURL."/wp-content/plugins/pdfjs-viewer-shortcode/web/viewer.php";
   
   $file_name = $incomingfromhandler["url"];
   $viewer_height = $incomingfromhandler["viewer_height"];
@@ -36,6 +38,7 @@ function pdfjs_function($incomingfromhandler) {
   $fullscreen = $incomingfromhandler["fullscreen"];
   $download = $incomingfromhandler["download"];
   $print = $incomingfromhandler["print"];
+  $openfile = $incomingfromhandler["openfile"];
   
   if ($download != 'true') {
       $download = 'false';
@@ -44,7 +47,13 @@ function pdfjs_function($incomingfromhandler) {
   if ($print != 'true') {
       $print = 'false';
   }
-  $final_url = $viewer_base_url."?file=".$file_name."&download=".$download."&print=".$print;
+  
+  if ($openfile != 'true') {
+      $openfile = 'false';
+  }
+  
+  $final_url = $viewer_base_url."?file=".$file_name."&download=".$download."&print=".$print."&openfile=".$openfile;
+  
   $fullscreen_link = '';
   if($fullscreen == 'true'){
        $fullscreen_link = '<a href="'.$final_url.'">View Fullscreen</a><br>';

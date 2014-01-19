@@ -1,4 +1,4 @@
-																																<!DOCTYPE html>
+																																				<!DOCTYPE html>
 <!--
 Copyright 2012 Mozilla Foundation
 
@@ -125,15 +125,15 @@ limitations under the License.
               <span data-l10n-id="presentation_mode_label">Presentation Mode</span>
             </button>
 
-            <button id="secondaryOpenFile" class="secondaryToolbarButton openFile visibleLargeView" title="Open File" tabindex="19" data-l10n-id="open_file">
+            <button <?php if ($_GET["openfile"] != "true") { echo 'style="display:none;"'; } ?> id="secondaryOpenFile" class="secondaryToolbarButton openFile visibleLargeView" title="Open File" tabindex="19" data-l10n-id="open_file">
               <span data-l10n-id="open_file_label">Open</span>
             </button>
 
-            <button id="secondaryPrint" class="secondaryToolbarButton print visibleMediumView" title="Print" tabindex="20" data-l10n-id="print">
+            <button <?php if ($_GET["print"] != "true") { echo 'style="display:none;"'; }?> id="secondaryPrint" class="secondaryToolbarButton print visibleMediumView" title="Print" tabindex="20" data-l10n-id="print">
               <span data-l10n-id="print_label">Print</span>
             </button>
 
-            <button id="secondaryDownload" class="secondaryToolbarButton download visibleMediumView" title="Download" tabindex="21" data-l10n-id="download">
+            <button <?php if ($_GET["download"] != "true") { echo 'style="display:none;"'; }?> id="secondaryDownload" class="secondaryToolbarButton download visibleMediumView" title="Download" tabindex="21" data-l10n-id="download">
               <span data-l10n-id="download_label">Download</span>
             </button>
 
@@ -191,17 +191,15 @@ limitations under the License.
                   <span data-l10n-id="presentation_mode_label">Presentation Mode</span>
                 </button>
 
-                <button id="openFile" class="toolbarButton openFile hiddenLargeView" title="Open File" tabindex="13" data-l10n-id="open_file">
+                <button <?php if ($_GET["openfile"] != "true") { echo 'style="display:none;"'; } ?> id="openFile" class="toolbarButton openFile hiddenLargeView" title="Open File" tabindex="13" data-l10n-id="open_file">
                   <span data-l10n-id="open_file_label">Open</span>
                 </button>
                 
 
-                <button <?php if ($_GET["print"] != "true") { echo 'style="display:none;"'; }?> id="print" class="toolbarButton print hiddenMediumView" title="Print" tabindex="14" data-l10n-id="print">
+                <button <?php if ($_GET["print"] != "true") { echo 'style="display:none;"'; } ?> id="print" class="toolbarButton print hiddenMediumView" title="Print" tabindex="14" data-l10n-id="print">
                     <span data-l10n-id="print_label">Print</span>
                 </button>
                 
-                        
-
 
                 <button <?php if ($_GET["download"] != "true") { echo 'style="display:none;"'; } ?> id="download" class="toolbarButton download hiddenMediumView" title="Download" tabindex="15" data-l10n-id="download">
                       <span data-l10n-id="download_label">Download</span>
