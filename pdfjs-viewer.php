@@ -1,14 +1,14 @@
-						<?php
+<?php
 /*
 Plugin Name: PDFjs Viewer
 Plugin URI: http://tphsfalconer.com
 Description: View PDFs with pdf.js
-Version: 1.1
+Version: 1.2
 Author: Ben & Josh
 Author URI: http://tphsfalconer.com
 License: GPLv2
 */
-//tell wordpress to register the demolistposts shortcode
+//tell wordpress to register the pdfjs-viewer shortcode
 add_shortcode("pdfjs-viewer", "pdfjs_handler");
 
 function pdfjs_handler($incomingfrompost) {
