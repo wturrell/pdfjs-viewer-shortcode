@@ -15,7 +15,7 @@ function pdfjs_handler($incomingfrompost) {
   //set defaults 
   $incomingfrompost=shortcode_atts(array(
     'url' => 'bad-url.pdf',  
-    'viewer_height' => '1360px',
+    'viewer_height' => '700px',
     'viewer_width' => '100%',
     'fullscreen' => 'true',
     'download' => 'true',
@@ -56,9 +56,9 @@ function pdfjs_function($incomingfromhandler) {
   
   $fullscreen_link = '';
   if($fullscreen == 'true'){
-       $fullscreen_link = '<a href="'.$final_url.'">View Fullscreen</a><br>';
+       $fullscreen_link = '<a class="pdfjs-viewer-fullscreen-link" href="'.$final_url.'">View Fullscreen</a><br>';
   }
-  $iframe_code = '<iframe width="'.$viewer_width.';" height="'.$viewer_height.';" src="'.$final_url.'"></iframe> ';
+  $iframe_code = '<iframe class="pdfjs-viewer" width="'.$viewer_width.';" height="'.$viewer_height.';" src="'.$final_url.'"></iframe> ';
   
   return $fullscreen_link.$iframe_code;
 }
