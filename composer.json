@@ -1,0 +1,14 @@
+{
+        "name"       : "wturrell/pdfjs-viewer-shortcode",
+        "description": "WordPress shortcode to display PDF JS Viewer",
+        "type"       : "wordpress-plugin",
+        "authors"    : [
+                {
+                        "name"    : "falconerweb / William Turrell",
+                        "homepage": "wturrell.co.uk"
+                }
+        ],
+        "require": {
+                "composer/installers": "~1.0"
+        }
+}
