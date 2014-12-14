@@ -60,6 +60,6 @@ function pdfjs_function($incomingfromhandler) {
   }
   $iframe_code = '<iframe class="pdfjs-viewer" width="'.$viewer_width.';" height="'.$viewer_height.';" src="'.$final_url.'"></iframe> ';
   
-  return $fullscreen_link.$iframe_code;
+  return $iframe_code . $fullscreen_link;
 }
 ?>
