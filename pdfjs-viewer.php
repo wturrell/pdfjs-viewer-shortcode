@@ -2,7 +2,7 @@
 /*
 Plugin Name: PDFjs Viewer
 Plugin URI: http://tphsfalconer.com
-Description: View PDFs with pdf.js
+Description: View PDFs with pdf.js ***IMPORTANT*** Customised for Greenpeace Energydesk, do not auto-update
 Version: 1.2
 Author: Ben & Josh
 Author URI: http://tphsfalconer.com
